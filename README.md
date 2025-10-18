@@ -22,18 +22,6 @@ Cada algoritmo calcula una solución al problema dado el conjunto de materias di
 
 ---
 
-## 🧩 Formulación del Problema
-
-Dado un conjunto de materias `M = {(Mi, mi)}` con sus cupos, y un conjunto de estudiantes `E = {(ej, msj)}` donde cada estudiante solicita materias con prioridades, el objetivo es **asignar materias sin sobrepasar los cupos**, minimizando la función de insatisfacción:
-
-\[
-F(M, E)(A) = \frac{1}{r}\sum_{j=1}^{r} f_j
-\]
-
-donde \(f_j\) mide la insatisfacción del estudiante *j* según las materias que no pudo obtener y sus prioridades.
-
----
-
 ## 🗂️ Estructura del Proyecto
 
 ### Directorio Principal
@@ -137,35 +125,7 @@ Donde:
 
 ---
 
-## ⚖️ Algoritmos Implementados
-
-| Algoritmo | Descripción | Ventajas | Desventajas |
-|------------|--------------|-----------|--------------|
-| **Fuerza Bruta (`rocFB`)** | Genera todas las asignaciones posibles y elige la mejor. | Solución óptima garantizada. | Tiempo exponencial, impráctico para grandes casos. |
-| **Voraz (`rocV`)** | Asigna cupos priorizando materias y estudiantes según heurísticas. | Rápido y simple. | Puede no encontrar la solución óptima. |
-| **Programación Dinámica (`rocPD`)** | Divide el problema en subproblemas con soluciones parciales óptimas. | Balance entre eficiencia y calidad. | Requiere más memoria y diseño cuidadoso. |
-
----
-
 ## 💾 Guardar y Comparar Resultados
 
 - Después de ejecutar un algoritmo, la interfaz permite **guardar la salida**.  
 - Puedes **comparar los tres métodos** para observar diferencias en costo de insatisfacción y tiempos de ejecución.
-
----
-
-## 📊 Complejidades Teóricas
-
-| Algoritmo | Complejidad Temporal | Complejidad Espacial |
-|------------|----------------------|----------------------|
-| Fuerza Bruta | O(n!) | O(1) |
-| Voraz | O(n log n) | O(n) |
-| Programación Dinámica | O(k·r) | O(k·r) |
-
----
-
-## 👨‍💻 Autor y Créditos
-**Desarrollado por:**  
-📌 *Jose Miguel Fuertes Benavides*  
-📘 *Análisis de Algoritmos II — Universidad del Valle*  
-📅 *Octubre de 2025*
